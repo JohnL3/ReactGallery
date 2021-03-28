@@ -1,0 +1,74 @@
+.divClass{
+    width: 58%;
+    float: left;
+    height: 400px;
+    padding-top: 10px;
+    border-radius:3px;
+    margin : 0px auto;
+    font-family: montserrat;
+}
+
+.h1Class{
+    font-family: montserrat;
+    text-align:center;
+    color:black;
+    font-size: 24px;
+
+}
+
+.artworkDivClass{
+    width: 28%;
+    margin: 10px .5%;
+    border: 1px dashed lightgrey;
+    float: left;
+    padding: 10px;
+}
+
+.imgContainer{
+
+    overflow: hidden;
+    border: lightgrey solid 1px;
+    width: auto;
+}
+
+.artworkDivClass img{
+    width:100%;
+
+}
+
+.artworkDivClass h4{
+    color: #4a4a4f;
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.artworkDivClass h5{
+    color: #4a4a4f;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.artworkDivClass h3{
+    color: #e84610;
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.artworkDivClass button{
+    background-color: #009FE3;
+    color: white;
+    padding: 5px 10px;
+    border: 2px solid white;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.artworkDivClass button:hover{
+    background-color: white;
+    color: #009FE3;
+  
+    border: 2px solid #009FE3;
+}

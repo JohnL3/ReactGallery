@@ -1,0 +1,58 @@
+.divClass{
+    height: 80px; 
+    background-color: #e84610;
+    border-radius:3px;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+    font-family: Montserrat;
+    
+}
+
+.h1Class{
+    float:left;
+    color: white
+}
+
+.buttonClass{
+    color: #e84610;
+    float: right;
+    background-color: white;
+    border: white solid 2px;
+    padding: 10px 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: Montserrat;
+}
+
+.buttonClass:hover{
+    color: white;;
+    background-color: #e84610;
+    border: white solid 2px;
+}
+
+.buttonClass:focus{
+    outline: 0;
+}
+
+.formDiv{
+    float: right;
+    margin-top: 10px;
+}
+
+.formDiv label{
+    color: white;
+    font-weight: bold;
+    margin: 0px 10px 0px 10px;
+}
+
+.submitButton{
+    color: #e84610;
+    float: right;
+    background-color: white;
+    border: white solid 2px;
+    padding: 5px 20px;
+    margin-left: 20px;
+    margin-top:10px;
+    font-family: Montserrat;
+}
+.inputClass{border: none;}
