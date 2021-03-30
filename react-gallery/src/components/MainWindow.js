@@ -1,6 +1,9 @@
 import React, {useState}from 'react'
 import styles from "./css/mainWindow.module.css";
 
+import CheckOutComponent from './CheckOutComponent';
+
+
 function MainWindow(props) {
     const artworks = [
         {
@@ -35,7 +38,6 @@ function MainWindow(props) {
     return (
         <div className = {styles.divClass}>
            <h1 className = {styles.h1Class}>Gallery</h1>
-           
            {
                artworks.map(artwork =>{
                 return(
@@ -50,7 +52,9 @@ function MainWindow(props) {
                     </div>
                 )
                 })
-           }
+            }
+            
+            <CheckOutComponent cartItems = {cartArray}/>
         </div>
     )
 }

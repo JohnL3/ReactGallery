@@ -10,7 +10,7 @@ function App() {
         <header><NavBar connected = {true}/></header>
         <section>
             <SideBar />
-            <MainWindow greeting = {false} />
+            <MainWindow greeting = {false} name = "hello"/>
             <CheckOutBar greeting = {false} />
         </section>
       
