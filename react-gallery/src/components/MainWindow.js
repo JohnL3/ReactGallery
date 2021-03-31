@@ -29,12 +29,13 @@ function MainWindow(props) {
     ]
 
     const [cartArray, setCartArray] = useState([]);
-    const addToCart = () => {
-        console.log({artworks});
-        setCartArray([...cartArray, {artworks}]);
-        console.log({cartArray});
+    const addToCart = (item) => {
+        if (!cartArray.some(cartItem => cartItem.name === item.name)){
+            setCartArray([...cartArray, item]);
+        }
+        console.log('cart array', cartArray);
     }
-
+    console.log('cart array', cartArray)
     return (
         <div className = {styles.divClass}>
            <h1 className = {styles.h1Class}>Gallery</h1>
@@ -48,13 +49,12 @@ function MainWindow(props) {
                         <h4>{artwork.name}</h4>
                         <h5>Artist: {artwork.artist}</h5>
                         <h3>Price: ${artwork.price}</h3>
-                        <button onClick = {addToCart}>Add to Cart</button>
+                        <button onClick = {() => addToCart(artwork)}>Add to Cart</button>
                     </div>
                 )
                 })
             }
-            
-            <CheckOutComponent cartItems = {cartArray}/>
+            <CheckOutComponent cartItems={cartArray}/>
         </div>
     )
 }

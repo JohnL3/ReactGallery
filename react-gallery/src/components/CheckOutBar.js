@@ -6,7 +6,7 @@ import styles from './css/checkOutBar.module.css';
 function CheckOutBar() {
     return (
         <div className = {styles.divClass}>
-            <CheckOutComponent />
+            {/* <CheckOutComponent /> */}
         </div>
     )
 }

@@ -11,7 +11,7 @@ function App() {
         <section>
             <SideBar />
             <MainWindow greeting = {false} name = "hello"/>
-            <CheckOutBar greeting = {false} />
+            <CheckOutBar />
         </section>
       
     </div>
