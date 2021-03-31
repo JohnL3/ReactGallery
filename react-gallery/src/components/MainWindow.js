@@ -33,6 +33,7 @@ function MainWindow(props) {
         console.log({artworks});
         setCartArray([...cartArray, {artworks}]);
         console.log({cartArray});
+        console.log("hello");
     }
 
     return (
