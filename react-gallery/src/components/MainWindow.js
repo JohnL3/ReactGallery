@@ -29,11 +29,13 @@ function MainWindow(props) {
     ]
 
     const [cartArray, setCartArray] = useState([]);
+
     const addToCart = (item) => {
         if (!cartArray.some(cartItem => cartItem.name === item.name)){
             setCartArray([...cartArray, item]);
         }
         console.log('cart array', cartArray);
+
     }
     console.log('cart array', cartArray)
     return (
