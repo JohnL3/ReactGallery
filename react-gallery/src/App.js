@@ -8,11 +8,11 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-        {/* <header><NavBar connected = {true}/></header> */}
-        <header><NavBarSimple /></header>
+        <header><NavBar connected = {true}/></header>
+        {/* <header><NavBarSimple /></header> */}
         <section>
-            {/* <SideBar /> */}
-            {/* <MainWindow greeting = {false} name = "hello"/> */}
+            <SideBar />
+            <MainWindow greeting = {false} name = "hello"/>
             {/* <CheckOutBar /> */}
         </section>
       

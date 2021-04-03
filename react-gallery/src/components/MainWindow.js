@@ -29,6 +29,7 @@ function MainWindow(props) {
     ]
 
     const [cartArray, setCartArray] = useState([]);
+    
 
     const addToCart = (item) => {
         if (!cartArray.some(cartItem => cartItem.name === item.name)){
@@ -37,10 +38,17 @@ function MainWindow(props) {
         console.log('cart array', cartArray);
 
     }
+
     console.log('cart array', cartArray)
     return (
         <div className = {styles.divClass}>
-           <h1 className = {styles.h1Class}>Gallery</h1>
+            <div className = {styles.divHeader}>
+                <h1 className = {styles.h1Class}>Gallery</h1>
+                <form>
+                    <input type="text" />
+                </form>
+            </div>
+           <div className = {styles.bodyDiv}>
            {
                artworks.map(artwork =>{
                 return(
@@ -56,7 +64,7 @@ function MainWindow(props) {
                 )
                 })
             }
-            <CheckOutComponent cartItems={cartArray}/>
+            </div>
         </div>
     )
 }
