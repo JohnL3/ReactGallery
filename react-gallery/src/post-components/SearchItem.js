@@ -5,7 +5,9 @@ function SearchItem(props) {
     const { name, title, description, image } = props.post
     return (
         <div className={css.SearchItem}>
-            <div>{name} {title}</div>
+            <div>
+                <h4>{name}: "{title}"</h4>
+            </div>
             <img src={image}/>
             <div>{description}</div>
         </div>

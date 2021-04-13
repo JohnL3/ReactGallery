@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {posts} from '../loremPicsum.json'
 import SearchItem from './SearchItem'
+import css from './SearchBar.module.css'
 
 export class SearchBar extends Component {
     constructor(props) {
@@ -29,12 +30,12 @@ export class SearchBar extends Component {
                         type="text"
                     />
                 </form>
-                <div>
+                <div className={css.SearchResults}>
                     {
                         this.state.posts.map(post => {
-                            const {title, description, name, image} = post;
+                            // const {title, description, name, image} = post;
                             return (
-                                <SearchItem key={title} post={post} />
+                                <SearchItem key={post.title} post={post} />
                                 // <div key={title}>
                                 //     <td>{title}</td>
                                 //     <td>{description}</td>

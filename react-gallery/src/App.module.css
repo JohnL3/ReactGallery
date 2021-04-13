@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-family: Montserrat;
+    outline: 0;
 }
 a {
     text-decoration: none;
@@ -15,6 +16,6 @@ a {
     text-align: center;
 }
 
-.App > div {
+/* .App > div {
     border: 1px black solid;
-}
+} */

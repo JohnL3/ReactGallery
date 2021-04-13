@@ -7,7 +7,6 @@
     justify-content: space-between;
 }
 .NavBar span {
-    border: 2px black solid;
     padding: 0px 30px;
 }
 .NavBar > div {
@@ -18,7 +17,6 @@
 .NavBar form {
     display: flex;
     flex-direction: column;
-    border: 2px black solid;
 }
 .NavBar button {
     color: #e84610;
@@ -29,7 +27,4 @@
     color: white;;
     background-color: #e84610;
     border: white solid 2px;
-}
-.NavBar button:focus {
-    outline: 0;
 }
