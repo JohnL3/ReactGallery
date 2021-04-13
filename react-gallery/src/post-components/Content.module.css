@@ -1,0 +1,7 @@
+.Content {
+    grid-row: 2;
+    grid-column: 3 / span 1;
+    border-radius: 3px;
+    background-color: #e6ecf0;
+    padding: 15px;
+}

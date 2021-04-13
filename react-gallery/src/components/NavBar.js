@@ -26,20 +26,20 @@ function NavBar(props) {
                         onClick = {
                             () => setLogin(false)
                             }>    
-                            Log in
+                            Sign In
                     </button>
-                    <button 
+                    {/* <button 
                         className={styles.buttonClass}
                         onClick = {
                             () => setLogin(true)
                         }>
                             Sign Up
-                    </button>
+                    </button> */}
                 </div>
             ):(
                 <div>
                     <h1 className={styles.h1Class}>Artwork Shop</h1>
-                   <div className = {styles.formDiv}>
+                    <div className = {styles.formDiv}>
                        <form onSubmit = {handleSubmit}>
                             <label htmlFor = "usernameLabel">Username</label>
                             <input 
@@ -64,6 +64,8 @@ function NavBar(props) {
                             <br />
                             <input 
                                 type="submit" value="Submit" className = {styles.submitButton}></input>
+                            <input 
+                                type="button" value="Cancel" className = {styles.submitButton}></input>
                         </form>
                     </div>
                 </div>

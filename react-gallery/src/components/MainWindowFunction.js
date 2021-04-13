@@ -1,11 +1,11 @@
-import React, {useState}from 'react'
+import React from 'react'
 import styles from "./css/mainWindow.module.css";
-
 import CheckOutComponent from './CheckOutComponent';
 
 
-function MainWindow(props) {
-    const artworks = [
+function MainWindowClass() {
+
+        const artworks = [
         {
             name:"Wolverine",
             artist: "Humberto Ramos",
@@ -28,25 +28,12 @@ function MainWindow(props) {
         },
     ]
 
-    const [cartArray, setCartArray] = useState([]);
     
 
-    const addToCart = (item) => {
-        if (!cartArray.some(cartItem => cartItem.name === item.name)){
-            setCartArray([...cartArray, item]);
-        }
-        console.log('cart array', cartArray);
-
-    }
-
-    console.log('cart array', cartArray)
     return (
         <div className = {styles.divClass}>
             <div className = {styles.divHeader}>
                 <h1 className = {styles.h1Class}>Gallery</h1>
-                {/* <form>
-                    <input type="text" />
-                </form> */}
             </div>
            <div className = {styles.bodyDiv}>
            {
@@ -59,7 +46,6 @@ function MainWindow(props) {
                         <h4>{artwork.name}</h4>
                         <h5>Artist: {artwork.artist}</h5>
                         <h3>Price: ${artwork.price}</h3>
-                        <button onClick = {() => addToCart(artwork)}>Add to Cart</button>
                     </div>
                 )
                 })
@@ -69,4 +55,4 @@ function MainWindow(props) {
     )
 }
 
-export default MainWindow
+export default MainWindowClass

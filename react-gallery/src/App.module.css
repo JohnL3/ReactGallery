@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+a {
+    text-decoration: none;
+}
+.App {
+    display: grid;
+    grid-template-rows: 50px auto 50px;
+    grid-template-columns: 30px minmax(150px, 0.5fr) 2fr 30px;
+    height: 100vh;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    text-align: center;
+}
+
+.App > div {
+    border: 1px black solid;
+}

@@ -1,0 +1,26 @@
+.NavBar {
+    background-color: #e84610;
+    grid-row: 1;
+    grid-column: 1 / span 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.NavBar span {
+    border: 2px black solid;
+    padding: 0px 30px;
+}
+.NavBar > button {
+    color: #e84610;
+    background-color: white;
+    border: white solid 2px;
+    height: 100%;
+}
+.NavBar > button:hover{
+    color: white;;
+    background-color: #e84610;
+    border: white solid 2px;
+}
+.NavBar > button:focus {
+    outline: 0;
+}
