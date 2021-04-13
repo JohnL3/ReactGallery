@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {posts} from '../loremPicsum.json'
+import SearchItem from './SearchItem'
 
 export class SearchBar extends Component {
     constructor(props) {
@@ -28,26 +29,22 @@ export class SearchBar extends Component {
                         type="text"
                     />
                 </form>
-                <table style={{margin: 'auto'}}>
-                    <thead>
-                        <tr><th>title</th><th>description</th><th>name</th><th>image</th></tr>
-                    </thead>
-                    <tbody>
-                        {
-                            this.state.posts.map(post => {
-                                const {title, description, name, image} = post;
-                                return (
-                                    <tr key={title}>
-                                        <td>{title}</td>
-                                        <td>{description}</td>
-                                        <td>{name}</td>
-                                        <td><img alt={name} src={image} /></td>
-                                    </tr>
-                                )
-                            })
-                        }
-                    </tbody>
-                </table>
+                <div>
+                    {
+                        this.state.posts.map(post => {
+                            const {title, description, name, image} = post;
+                            return (
+                                <SearchItem key={title} post={post} />
+                                // <div key={title}>
+                                //     <td>{title}</td>
+                                //     <td>{description}</td>
+                                //     <td>{name}</td>
+                                //     <td><img alt={name} src={image} /></td>
+                                // </div>
+                            )
+                        })
+                    }                    
+                </div>
             </div>
         )
     }

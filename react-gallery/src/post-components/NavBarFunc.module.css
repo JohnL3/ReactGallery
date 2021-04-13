@@ -13,6 +13,7 @@
 .NavBar > div {
     display: flex;
     flex-direction: row;
+    padding-right: 30px;
 }
 .NavBar form {
     display: flex;
