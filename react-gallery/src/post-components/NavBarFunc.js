@@ -23,8 +23,20 @@ function NavBarFunc() {
                 ? <button onClick={handleLogOut}>Log out</button>
                 : <>
                     <form id="login-form" onSubmit={(e) => handleLogIn(e)}>
-                        <input onChange={e => setUsername(e.target.value)} id="username" type="text" value={username} />
-                        <input onChange={e => setPassword(e.target.value)} id="password" type="password" value={password} />
+                        <div>
+                            <label htmlFor="username">username: </label>
+                            <input
+                                onChange={e => setUsername(e.target.value)} value={username}
+                                id="username" type="text" placeholder="username"
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="password">password: </label>
+                            <input
+                                onChange={e => setPassword(e.target.value)} value={password}
+                                id="password" type="password" placeholder="password"
+                            />
+                        </div>
                     </form>
                     <button type="submit" form="login-form">Log in</button>
                 </>

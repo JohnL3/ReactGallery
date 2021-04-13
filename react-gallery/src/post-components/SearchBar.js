@@ -23,11 +23,13 @@ export class SearchBar extends Component {
     render() {
         return (
             <div>
-                <h1>Post Search 3</h1>
+                <h4>posts found: {this.state.posts.length}</h4>
                 <form>
                     <input
                         onChange={(e) => this.handleChange(e)}
                         type="text"
+                        size="30"
+                        placeholder="search posts by author's name..."
                     />
                 </form>
                 <div className={css.SearchResults}>

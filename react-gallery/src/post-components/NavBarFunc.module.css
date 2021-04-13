@@ -7,24 +7,41 @@
     justify-content: space-between;
 }
 .NavBar span {
-    padding: 0px 30px;
+    margin: 0px 30px;
+    color: white;
+    font-size: x-large;
+    font-weight: bolder;
 }
 .NavBar > div {
     display: flex;
     flex-direction: row;
+    align-items: center;
     padding-right: 30px;
 }
 .NavBar form {
     display: flex;
     flex-direction: column;
 }
+.NavBar label {
+    color: white;
+    margin: 1px;
+}
+.NavBar input {
+    margin: 1px;
+}
+.NavBar form > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
 .NavBar button {
     color: #e84610;
     background-color: white;
     border: white solid 2px;
+    padding: 5px;
 }
 .NavBar button:hover{
-    color: white;;
+    color: white;
     background-color: #e84610;
     border: white solid 2px;
 }

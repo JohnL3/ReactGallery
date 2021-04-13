@@ -7,16 +7,20 @@
     justify-content: space-between;
 }
 .NavBar span {
-    padding: 0px 30px;
+    margin: 0px 30px;
+    color: white;
 }
-.NavBar > button {
+.NavBar > div {
+    margin: 0 30px;
+}
+.NavBar button {
     color: #e84610;
     background-color: white;
     border: white solid 2px;
-    height: 100%;
+    padding: 5px;
 }
-.NavBar > button:hover{
-    color: white;;
+.NavBar button:hover{
+    color: white;
     background-color: #e84610;
     border: white solid 2px;
 }
