@@ -6,7 +6,7 @@ export class NavBarClass extends Component {
         super(props)
         this.state = {
             message: "Hello, guest!",
-            buttonText: "log in"
+            buttonText: "log in",
         }
     }
     handleLogIn = () => {
@@ -18,7 +18,7 @@ export class NavBarClass extends Component {
     render() {
         return (
             <div className={css.NavBar}>
-                <span>My Gallery</span>
+                <h1>My Gallery</h1>
                 <div>
                     <span>{this.state.message}</span>
                     <button onClick={this.handleLogIn}>

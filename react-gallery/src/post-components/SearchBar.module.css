@@ -1,3 +1,9 @@
+.SearchBar > h4{
+    font-size: 14px;
+    display: inline-block;
+    color: #4a4a4f;
+}
+
 .SearchResults {
     display: flex;
     flex-direction: column;

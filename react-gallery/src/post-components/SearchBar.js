@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {posts} from '../loremPicsum.json'
-import SearchItem from './SearchItem'
+import { posts } from '../loremPicsum.json'
+import PostItem from './PostItem'
 import css from './SearchBar.module.css'
 
 export class SearchBar extends Component {
@@ -22,7 +22,7 @@ export class SearchBar extends Component {
     }
     render() {
         return (
-            <div>
+            <div className = {css.SearchBar}>
                 <h4>posts found: {this.state.posts.length}</h4>
                 <form>
                     <input
@@ -37,7 +37,7 @@ export class SearchBar extends Component {
                         this.state.posts.map(post => {
                             // const {title, description, name, image} = post;
                             return (
-                                <SearchItem key={post.title} post={post} />
+                                <PostItem key={post.title} post={post} />
                                 // <div key={title}>
                                 //     <td>{title}</td>
                                 //     <td>{description}</td>

@@ -1,10 +1,12 @@
 .NavBar {
-    background-color: #e84610;
+
     grid-row: 1;
     grid-column: 1 / span 4;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+
 }
 .NavBar span {
     margin: 0px 30px;
@@ -12,16 +14,19 @@
     font-size: x-large;
     font-weight: bolder;
 }
+
 .NavBar > div {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-right: 30px;
 }
+
 .NavBar form {
     display: flex;
     flex-direction: column;
 }
+
 .NavBar label {
     color: white;
     margin: 1px;
@@ -34,6 +39,11 @@
     justify-content: space-between;
     padding: 0px 10px;
 }
+
+.NavBar #login-form > div{
+    display: inline-block;
+}
+
 .NavBar button {
     color: #e84610;
     background-color: white;
