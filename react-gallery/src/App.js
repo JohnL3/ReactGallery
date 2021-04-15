@@ -8,8 +8,8 @@ import NavBarFunc from './post-components/NavBarFunc';
 function App() {
   return (
     <div className={css.App}>
-        <NavBarClass />
-        {/* <NavBarFunc /> */}
+        {/* <NavBarClass /> */}
+        <NavBarFunc />
         <SideBar />
         <Content />
         <Footer />

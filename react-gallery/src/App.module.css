@@ -14,7 +14,8 @@ a {
     column-gap: 0.5rem;
     row-gap: 0.5rem;
     text-align: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
+    height: 100vh;
 }
 
 /* .App > div {

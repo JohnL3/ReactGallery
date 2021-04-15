@@ -17,28 +17,28 @@ function NavBarFunc() {
     }
     return (
         <div className={css.NavBar}>
-            <span>My Gallery</span>
+            <h1>My Gallery</h1>
             <div>
                 { isLoggedIn
-                ? <button onClick={handleLogOut}>Log out</button>
+                ? <button onClick={handleLogOut}>Sign In</button>
                 : <>
                     <form id="login-form" onSubmit={(e) => handleLogIn(e)}>
                         <div>
-                            <label htmlFor="username">username: </label>
+                            <label htmlFor="username">Username: </label>
                             <input
                                 onChange={e => setUsername(e.target.value)} value={username}
                                 id="username" type="text" placeholder="username"
                             />
                         </div>
                         <div>
-                            <label htmlFor="password">password: </label>
+                            <label htmlFor="password">Password: </label>
                             <input
                                 onChange={e => setPassword(e.target.value)} value={password}
                                 id="password" type="password" placeholder="password"
                             />
                         </div>
                     </form>
-                    <button type="submit" form="login-form">Log in</button>
+                    <button type="submit" form="login-form">Submit</button>
                 </>
                 }
                 

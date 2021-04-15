@@ -2,14 +2,26 @@ import React, { Component } from 'react'
 import PostItem from './PostItem'
 import css from './Content.module.css'
 import { posts } from '../loremPicsum.json'
+import Loader from './Loader'
 
 
 export class Content extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            posts: posts
+            // CDM BIT
+            posts: [],
+            isLoading: true
+            //
         }
+    }
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                isLoading: false,
+                posts: posts
+            })
+        }, 2000)
     }
     handleChange = (event) => {
         const name = event.target.value
@@ -26,7 +38,7 @@ export class Content extends Component {
                 <div className = {css.TitleBar}> 
                     <h1>My Photos</h1>
                     <form>
-                        <label for = "searchInput">Search: </label>
+                        <label htmlFor = "searchInput">Search: </label>
                         <input
                             onChange={(e) => this.handleChange(e)}
                             type="text"
@@ -40,14 +52,16 @@ export class Content extends Component {
                 <h4>posts found: {this.state.posts.length}</h4>
 
                 <div className={css.SearchResults}>
-                        {
-                            this.state.posts.map(post => {
-                                return (
-                                    <PostItem key={post.title} post={post} />
-                                )
-                            })
-                        }                    
-                    </div>
+                    {
+                        this.state.isLoading ?
+                        <Loader /> :
+                        this.state.posts.map(post => {
+                            return (
+                                <PostItem key={post.title} post={post} />
+                            )
+                        })
+                    }                    
+                </div>
             </div>
         )
     }
