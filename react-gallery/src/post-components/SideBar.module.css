@@ -1,21 +1,22 @@
 .SideBar {
     grid-row: 2;
-    grid-column: 2 / span 1;
-
-    border-radius: 3px;
+    grid-column: 1;
+    /* border-radius: 3px; */
     display: flex;
     flex-direction: column;
-    padding: 10px 0px;
+    padding: 10px 0;
     text-align: left;
+    padding-left: 40px
 }
 .SideBar > a {
     background-color: white;
     color: #445261;
     border: white solid 1px;
-    padding: 10px 0px;
-    margin-top: 0px;
-    border-radius: 3px;
+    padding: 10px 0;
+    /* margin-top: 0; */
+    /* border-radius: 3px; */
     padding-left: 10px;
+    margin-left: 30px;
 }
 .SideBar > a:hover{
     color: #445261;

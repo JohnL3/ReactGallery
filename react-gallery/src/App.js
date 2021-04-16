@@ -1,5 +1,5 @@
 import css from './App.module.css';
-import NavBarClass from './post-components/NavBarClass';
+// import NavBarClass from './post-components/NavBarClass';
 import SideBar from './post-components/SideBar'
 import Footer from './post-components/Footer';
 import Content from './post-components/Content';

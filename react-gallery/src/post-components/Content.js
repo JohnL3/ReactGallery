@@ -1,7 +1,10 @@
-import React, { Component } from 'react'
-import PostItem from './PostItem'
+import React, { Component } from 'react';
+import axios from 'axios';
+import PostItem from './PostItem';
+import API_KEY from '../secrets';
 import css from './Content.module.css'
-import { posts } from '../loremPicsum.json'
+// import { posts } from '../loremPicsum.json';
+import { posts } from '../posts.json';
 import Loader from './Loader'
 
 
@@ -23,6 +26,17 @@ export class Content extends Component {
             })
         }, 2000)
     }
+
+// API BIT (CLASS)
+async fetchImages() {
+    const { data } = await axios.get(`https://pixabay.com/api/?key=${API_KEY}&per_page=100&safesearch=true&editors_choice=true&orientation=horizontal`);
+    const images = data.hits.map(hit => hit.webformatURL)
+    this.setState({
+        isLoading: false,
+        posts: posts.map((post, idx) => ({...post, image: images[idx]}))
+    })
+}
+
     handleChange = (event) => {
         const name = event.target.value
         const filteredPosts = posts.filter(post => {
